@@ -1,10 +1,34 @@
-__pycache__/
-.pytest_cache/
+@"
+
+# Python virtual environments
 .venv/
-.env
+.venv-1/
+venv/
+env/
+
+# Python cache
+__pycache__/
 *.pyc
-artifacts/*.joblib
-artifacts/*.json
-data/*.csv
+.pytest_cache/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Generated ML artifacts
+mlruns/
+*.joblib
+*.pkl
+*.pt
+*.pth
+
+# Frontend dependencies
 node_modules/
-.DS_Store
+dist/
+build/
+
+# IDE
+.vscode/
+.idea/
+"@ | Add-Content .gitignore
